@@ -7,7 +7,7 @@ Ubuntu and Debian Seedbox Installation
 
 Download script
 
-	wget --no-check-certificate https://raw.githubusercontent.com/arakasi72/rtinst/master/rtinst.sh
+	wget --no-check-certificate https://raw.githubusercontent.com/xjyxh1/rtinstall/master/rtinst.sh
 
 and then to run it:
 
