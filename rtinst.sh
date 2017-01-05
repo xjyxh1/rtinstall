@@ -10,8 +10,8 @@
 
 PATH=/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/bin:/sbin
 
-rtorrentrel='c3f6db03841c0b1e5c71fd69a6b11cf8d8e3eaa5'
-libtorrentrel='4d305e387a6131c94b87c20595429389a3c55c02'
+rtorrentrel='3c42371d014cdfe8d54084d4c554ad32ba531941'
+libtorrentrel='c167c5a9e0bcf0df23ae5efd91396aae0e37eb87'
 rtorrentloc='https://github.com/rakshasa/rtorrent/archive/'$rtorrentrel'.zip'
 libtorrentloc='https://github.com/rakshasa/libtorrent/archive/'$libtorrentrel'.zip'
 xmlrpcloc='https://svn.code.sf.net/p/xmlrpc-c/code/super_stable'
