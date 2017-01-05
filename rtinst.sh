@@ -12,8 +12,8 @@ PATH=/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/bin:/sbin
 
 rtorrentrel='c3f6db03841c0b1e5c71fd69a6b11cf8d8e3eaa5'
 libtorrentrel='4d305e387a6131c94b87c20595429389a3c55c02'
-rtorrentloc='https://github.com/rakshasa/rtorrent/archive/'$rtorrentrel'.tar.gz'
-libtorrentloc='https://github.com/rakshasa/libtorrent/archive/'$libtorrentrel'.tar.gz'
+rtorrentloc='https://github.com/rakshasa/rtorrent/archive/'$rtorrentrel'.zip'
+libtorrentloc='https://github.com/rakshasa/libtorrent/archive/'$libtorrentrel'.zip'
 xmlrpcloc='https://svn.code.sf.net/p/xmlrpc-c/code/super_stable'
 
 blob=master
