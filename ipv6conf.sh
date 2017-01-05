@@ -20,3 +20,5 @@ echo "iface eno1 inet6 static" >> /etc/network/interfaces
 echo "    address 2001:bc8:2664:100::1" >> /etc/network/interfaces
 echo "    netmask 56" >> /etc/network/interfaces
 
+ip6tables -A OUTPUT -p udp --dport 547 -m limit --limit 10/min --limit-burst 5 -j ACCEPT
+ip6tables -A OUTPUT -p udp --dport 547 -j DROP
