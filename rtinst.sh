@@ -261,7 +261,7 @@ if [ "$fullrel" = "Ubuntu 12.04.5 LTS" ]; then
 fi
 
 echo "Updating package lists" | tee $logfile
-apt-get update 2>&1 >>$logfile | tee -a $logfile
+apt-get -o Acquire::ForceIPv4=true update 2>&1 >>$logfile | tee -a $logfile
 if ! [ $? = 0 ]; then
   error_exit "Problem updating packages."
 fi
