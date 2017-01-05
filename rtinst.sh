@@ -519,14 +519,14 @@ if [ $install_rt = 0 ]; then
   else
     ./configure --prefix=/usr >> $logfile 2>&1
   fi
-  make  >> $logfile 2>&1
+  make -j4 >> $logfile 2>&1
   make install >> $logfile 2>&1
 
   cd ../rtorrent-$rtorrentrel
   echo "Installing rtorrent" | tee -a $logfile
   ./autogen.sh >> $logfile 2>&1
   ./configure --prefix=/usr --with-xmlrpc-c --enable-ipv6 >> $logfile 2>&1
-  make  >> $logfile 2>&1
+  make -j4 >> $logfile 2>&1
   make install >> $logfile 2>&1
   ldconfig >> $logfile 2>&1
 else
