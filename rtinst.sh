@@ -10,10 +10,10 @@
 
 PATH=/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/bin:/sbin
 
-rtorrentrel='0.9.6'
-libtorrentrel='0.13.6'
-rtorrentloc='http://rtorrent.net/downloads/rtorrent-'$rtorrentrel'.tar.gz'
-libtorrentloc='http://rtorrent.net/downloads/libtorrent-'$libtorrentrel'.tar.gz'
+rtorrentrel='c3f6db03841c0b1e5c71fd69a6b11cf8d8e3eaa5'
+libtorrentrel='4d305e387a6131c94b87c20595429389a3c55c02'
+rtorrentloc='https://github.com/rakshasa/rtorrent/archive/rtorrent-'$rtorrentrel'.tar.gz'
+libtorrentloc='https://github.com/rakshasa/libtorrent/archive/libtorrent-'$libtorrentrel'.tar.gz'
 xmlrpcloc='https://svn.code.sf.net/p/xmlrpc-c/code/super_stable'
 
 blob=master
@@ -517,14 +517,14 @@ if [ $install_rt = 0 ]; then
   else
     ./configure --prefix=/usr >> $logfile 2>&1
   fi
-  make -j2 >> $logfile 2>&1
+  make  >> $logfile 2>&1
   make install >> $logfile 2>&1
 
   cd ../rtorrent-$rtorrentrel
   echo "Installing rtorrent" | tee -a $logfile
   ./autogen.sh >> $logfile 2>&1
-  ./configure --prefix=/usr --with-xmlrpc-c >> $logfile 2>&1
-  make -j2 >> $logfile 2>&1
+  ./configure --prefix=/usr --with-xmlrpc-c --enable-ipv6 >> $logfile 2>&1
+  make  >> $logfile 2>&1
   make install >> $logfile 2>&1
   ldconfig >> $logfile 2>&1
 else
