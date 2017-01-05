@@ -500,9 +500,11 @@ if [ $install_rt = 0 ]; then
   echo "Downloading rtorrent source files" | tee -a $logfile
 
   svn co $xmlrpcloc xmlrpc  >> $logfile 2>&1 || error_exit "Unable to download xmlrpc source files from https://svn.code.sf.net/p/xmlrpc-c/code/stable"
-  curl -# $libtorrentloc | tar xz  >> $logfile 2>&1 || error_exit "Unable to download libtorrent source files from http://libtorrent.rakshasa.no/downloads"
-  curl -# $rtorrentloc | tar xz  >> $logfile 2>&1 || error_exit "Unable to download rtorrent source files from http://libtorrent.rakshasa.no/downloads"
-
+  wget $libtorrentloc || error_exit "Unable to download libtorrent"
+  unzip libtorrent-$libtorrentrel.zip
+  wget $rtorrentloc || error_exit "Unable to download rtorrent"
+  unzip rtorrent-$rtorrentrel.zip
+  
   cd xmlrpc
   echo "Installing xmlrpc" | tee -a $logfile
   ./configure --prefix=/usr --enable-libxml2-backend --disable-libwww-client --disable-wininet-client --disable-abyss-server --disable-cgi-server >> $logfile 2>&1
