@@ -12,4 +12,3 @@ echo "}" >>  /etc/dhcp/dhclient6.conf
 
 dhclient -cf /etc/dhcp/dhclient6.conf -6 -P -v $INTERFACE
 /sbin/ifconfig $INTERFACE inet6 add $BLOCK_ADDR/56
-ping6 ipv6.google.com
